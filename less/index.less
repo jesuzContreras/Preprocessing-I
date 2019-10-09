@@ -48,12 +48,118 @@ table {
 	border-spacing: 0;
 }
 
+//mix ins
+.li-size(){
+	li{
+		font-size: 1.6rem;
+	}
+}
+
+.flex(){
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	margin: 2%;
+}
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html{
+	font-size: 62.5%;
 }
 
+html, body {
+	height: 100%;
+	
+}
+
+p{
+	font-size: 1.8rem;
+}
+
+header {
+	.navBar{
+		display: flex;
+		justify-content: flex-end;
+			@media( max-width: 500px ){
+				flex-direction: column;
+				width: 90%;
+			}
+		
+		nav{
+			display: flex;
+			justify-content: space-around;
+			background-color: lightblue;
+			width: 50%;
+			padding: 2%;
+				@media( max-width: 500px ){
+					width: 100%;
+				}
+			
+			a{
+				text-decoration: none;
+				font-size: 1.8rem;
+				color: black;
+				padding: 20px;
+				background-color: white;
+				border-radius: 8px;
+
+			}//closes a
+
+		}//closes nav
+
+	}//closes div
+
+	h1{
+		font-size: 4rem;
+		width: 50%;
+		display: flex;
+		align-items: center;
+			@media( max-width: 500px ){
+				width: 100%;
+			}
+	}
+}//closes header
+
+section{
+	img{
+		width:100%;
+		height: 33vh;
+			
+			@media (max-width: 500px){
+				display: none;
+			}
+	}
+	div{
+		h2{
+			font-size: 3rem;
+			margin-bottom: 2%;
+		}
+	}
+	#about {
+		.flex();
+	}
+
+	#work {
+		.flex();
+		.li-size();
+	}
+
+	#education {
+		.flex();
+		.li-size();
+	}
+
+	#skills {
+		.flex();
+		.li-size();
+	}
+
+	#contact {
+		.flex();
+	}
+}
