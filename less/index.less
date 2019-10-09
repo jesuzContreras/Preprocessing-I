@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Display&display=swap');
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -74,6 +76,9 @@ html{
 
 html, body {
 	height: 100%;
+	font-family: 'Big Shoulders Display', cursive;
+	width: 95%;
+	margin: 0 auto;
 	
 }
 
@@ -98,6 +103,7 @@ header {
 			padding: 2%;
 				@media( max-width: 500px ){
 					width: 100%;
+					justify-content: space-evenly;
 				}
 			
 			a{
@@ -107,6 +113,11 @@ header {
 				padding: 20px;
 				background-color: white;
 				border-radius: 8px;
+				@media(max-width: 500px){
+					padding: 10px;
+					font-size: 1.6rem;
+
+				}
 
 			}//closes a
 
@@ -121,6 +132,7 @@ header {
 		align-items: center;
 			@media( max-width: 500px ){
 				width: 100%;
+				justify-content: center;
 			}
 	}
 }//closes header
